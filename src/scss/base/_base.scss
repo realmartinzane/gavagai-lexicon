@@ -1,0 +1,51 @@
+*, *::after, *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+// Define 1rem
+html 
+{
+    font-size: 62.5%;
+
+    @media only screen and (min-width: 120em)
+    {
+        font-size: 72.5%;
+    }
+
+    @media only screen and (min-width: 160em)
+    {
+        font-size: 82.5%;
+    }
+
+    @media only screen and (min-width: 200em)
+    {
+        font-size: 102.5%;
+    }
+
+    @media only screen and (max-width: 62.5em)
+    {
+        font-size: 52.5%;
+    }
+}
+
+body 
+{
+    box-sizing: border-box;   
+    height: 100vh;
+    max-height: 100vh;
+    background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+
+    @media only screen and (max-width: 35em) 
+    {
+        padding: 5rem 0;
+    }
+
+    // TYPOGRAPHY
+    font-family: $font-primary;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: $color-text;
+}
